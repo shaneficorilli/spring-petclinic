@@ -22,12 +22,10 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     strategy:
       matrix:
         java: [ '17' ]
-
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK ${{matrix.java}}
@@ -38,3 +36,8 @@ jobs:
           cache: maven
       - name: Build with Maven Wrapper
         run: ./mvnw -B package
+  frogbot-scan:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Frogbot by JFrog
+      uses: jfrog/frogbot@v2.21.7
