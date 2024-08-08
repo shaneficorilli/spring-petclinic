@@ -21,6 +21,15 @@ on:
         - debug
 
 jobs:
+  frogbot-scan:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Frogbot by JFrog
+      uses: jfrog/frogbot@v2.21.7
+      env:
+        JF_URL: ${{ secrets.JF_URL }}
+        JF_ACCESS_TOKEN: ${{ secrets.JF_ACCESS_TOKEN }}
+        JF_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   build:
     runs-on: ubuntu-latest
     strategy:
@@ -36,8 +45,4 @@ jobs:
           cache: maven
       - name: Build with Maven Wrapper
         run: ./mvnw -B package
-  frogbot-scan:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Frogbot by JFrog
-      uses: jfrog/frogbot@v2.21.7
+  
