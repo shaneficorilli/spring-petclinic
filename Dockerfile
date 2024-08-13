@@ -4,4 +4,4 @@ COPY spring-petclinic-3.3.0-SNAPSHOT.jar.original /petclinic/spring-petclinic-3.
 ENV SERVER_PORT=8080
 WORKDIR /petclinic
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","/spring-petclinic-3.3.0-SNAPSHOT.jar"]
+ENTRYPOINT ["java","-jar","/petclinic/spring-petclinic-3.3.0-SNAPSHOT.jar"]
