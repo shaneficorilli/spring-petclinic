@@ -1,5 +1,5 @@
 FROM eclipse-temurin:17-jdk-alpine 
-RUN mkdir /pertclinic
+RUN mkdir /petclinic
 COPY target/spring-petclinic-3.3.0-SNAPSHOT.jar.original /petclinic/spring-petclinic-3.3.0-SNAPSHOT.jar
 ENV SERVER_PORT=8080
 WORKDIR /petclinic
