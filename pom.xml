@@ -283,7 +283,7 @@
             <manifest>
               <addClasspath>true</addClasspath>
               <classpathPrefix>lib/</classpathPrefix>
-              <mainClass>org.springframework.samples.petclinicc.PetClinicApplication</mainClass>
+              <mainClass>org.springframework.samples.petclinic.PetClinicApplication</mainClass>
             </manifest>
           </archive>
         </configuration>
