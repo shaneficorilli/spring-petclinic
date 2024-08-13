@@ -43,4 +43,11 @@ jobs:
           JF_GIT_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Build with Maven Wrapper
         run: ./mvnw -B package
+  upload-artifact:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/upload-artifact@v4
+        with:
+          name: petclinic-jar
+          path: /home/runner/work/spring-petclinic/spring-petclinic/target/spring-petclinic-3.3.0-SNAPSHOT.jar.original
   
