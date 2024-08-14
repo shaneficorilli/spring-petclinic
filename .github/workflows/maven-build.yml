@@ -34,7 +34,6 @@ jobs:
           java-version: ${{matrix.java}}
           distribution: 'adopt'
           cache: maven
-      - uses: actions/checkout@v4
       - name: Frogbot by JFrog
         uses: jfrog/frogbot@v2.21.7
         env:
